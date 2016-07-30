@@ -1,12 +1,6 @@
-doctype html
-html
-  head
-    title Voting App
-    | &#x9;&#x9;
-    | &#x9;&#x9;
-    link(href='/public/css/main.css', rel='stylesheet', type='text/css')
-  | &#x9;
-  body
+extends layout
+
+block content
     .container
       .github-profile
         img(src='/public/img/gh-mark-32px.png', alt='github logo')
@@ -31,9 +25,5 @@ html
         | &#x9;&#x9;&#x9;&#x9;
         p#menu-divide |
         | &#x9;&#x9;&#x9;&#x9;
-        a.menu(href='/logout') Logout
-    | &#x9;&#x9;
-    | &#x9;&#x9;
-    script(type='text/javascript', src='common/ajax-functions.js')
-    | &#x9;&#x9;
-    script(type='text/javascript', src='controllers/userController.client.js')
+
+

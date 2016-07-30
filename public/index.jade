@@ -1,8 +1,6 @@
-doctype html
-html
-  head
-    title Voting App
-    link(href='/public/css/main.css', rel='stylesheet', type='text/css')
+extends layout 
+
+block content
   header
     p
       | Welcome, 
@@ -11,11 +9,6 @@ html
     a.menu(href='/profile') Profile
     p |
     a.menu(href='/logout') Logout
-  body
-    .container
-      img(src='/public/img/clementine_150.png')
-      br
-      p.clementine-text Clementine.js
     .container
       p
         | You have clicked the button 
@@ -25,6 +18,3 @@ html
       .btn-container
         button.btn.btn-add(type='submit') CLICK ME!
         button.btn.btn-delete RESET
-    script(type='text/javascript', src='common/ajax-functions.js')
-    script(type='text/javascript', src='controllers/clickController.client.js')
-    script(type='text/javascript', src='controllers/userController.client.js')
