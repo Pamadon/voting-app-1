@@ -17,12 +17,12 @@ module.exports = function (app, passport) {
 
 	app.route('/')
 		.get(isLoggedIn, function (req, res) {
-			res.sendFile(path + '/public/index.html');
+			res.render(path + '/public/index.jade');
 		});
 
 	app.route('/login')
 		.get(function (req, res) {
-			res.sendFile(path + '/public/login.html');
+			res.render(path + '/public/login.jade');
 		});
 
 	app.route('/logout')
@@ -33,7 +33,7 @@ module.exports = function (app, passport) {
 
 	app.route('/profile')
 		.get(isLoggedIn, function (req, res) {
-			res.sendFile(path + '/public/profile.html');
+			res.render(path + '/public/profile.jade');
 		});
 
 	app.route('/api/:id')

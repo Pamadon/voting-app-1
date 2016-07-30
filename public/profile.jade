@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    title Voting App
+    | &#x9;&#x9;
+    | &#x9;&#x9;
+    link(href='/public/css/main.css', rel='stylesheet', type='text/css')
+  | &#x9;
+  body
+    .container
+      .github-profile
+        img(src='/public/img/gh-mark-32px.png', alt='github logo')
+        | &#x9;&#x9;&#x9;&#x9;
+        p
+          span ID: 
+          span#profile-id.profile-value
+        | &#x9;&#x9;&#x9;&#x9;
+        p
+          span Username: 
+          span#profile-username.profile-value
+        | &#x9;&#x9;&#x9;&#x9;
+        p
+          span Display Name: 
+          span#display-name.profile-value
+        | &#x9;&#x9;&#x9;&#x9;
+        p
+          span Repositories: 
+          span#profile-repos.profile-value
+        | &#x9;&#x9;&#x9;&#x9;
+        a.menu(href='/') Home
+        | &#x9;&#x9;&#x9;&#x9;
+        p#menu-divide |
+        | &#x9;&#x9;&#x9;&#x9;
+        a.menu(href='/logout') Logout
+    | &#x9;&#x9;
+    | &#x9;&#x9;
+    script(type='text/javascript', src='common/ajax-functions.js')
+    | &#x9;&#x9;
+    script(type='text/javascript', src='controllers/userController.client.js')

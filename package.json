@@ -29,6 +29,15 @@
     "express-session": "^1.11.3",
     "mongoose": "^4.1.0",
     "passport": "^0.3.0",
-    "passport-github": "^1.0.0"
+    "passport-github": "^1.0.0",
+    "path": "*",
+    "serve-favicon": "*",
+    "morgan": "*",
+    "express-validator": "*",
+    "cookie-parser": "*",
+    "body-parser": "*",
+    "multer": "*",
+    "connect-flash": "*",
+    "jade": "*"
   }
 }
