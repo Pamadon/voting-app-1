@@ -1,13 +1,13 @@
 'use strict';
 
 var mongoose = require('mongoose');
-var voteSchema = new mongoose.Schema({ ip: 'String' });
 var choiceSchema = new mongoose.Schema({ 
     text: String,
-    votes: [voteSchema]
+    votes: Number
 });
 var Poll = new mongoose.Schema({
     question: { type: String, required: true },
+    creator: String,
     choices: [choiceSchema]
 });
 	

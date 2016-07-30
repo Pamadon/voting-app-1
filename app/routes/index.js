@@ -17,7 +17,19 @@ module.exports = function (app, passport) {
 
 	app.route('/')
 		.get(isLoggedIn, function (req, res) {
+			
+			var db = req.db;
+			var mypolls = db.get('polls');
+			
 			res.render(path + '/public/index.jade');
+		});
+		
+	app.route('/mypolls')
+		.get(isLoggedIn, function (req, res) {
+			var db = req.db;
+			var mypolls = db.get('polls');
+			
+			res.render('./public/mypolls.jade');
 		});
 
 	app.route('/login')

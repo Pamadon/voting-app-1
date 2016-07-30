@@ -14,8 +14,6 @@ var multer = require('multer');
 var flash = require('connect-flash');
 
 var routes = require('./app/routes/index.js');
-var mypolls = require('./app/routes/mypolls.js');
-var newpoll = require('./app/routes/newpoll.js');
 
 var app = express();
 require('dotenv').load();
