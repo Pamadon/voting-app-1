@@ -1,7 +1,10 @@
 'use strict';
-
+require('dotenv').load();
 var path = process.cwd();
 var ClickHandler = require(path + '/app/controllers/clickHandler.server.js');
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+var db = mongoose.createConnection(process.env.MONGO_URI);
 
 module.exports = function (app, passport) {
 
@@ -27,8 +30,18 @@ module.exports = function (app, passport) {
 			//var db = req.db;
 			//var mypolls = db.get('polls');
 			
-			res.render('./public/mypolls.jade');
+			res.render(path + '/public/mypolls.jade');
 		});
+		
+	app.route('/polls')
+		.get(function(req, res) {
+		    
+		    var polls = db;
+		    
+		    console.log(polls);
+		    
+		    res.render(path + '/public/polls.jade');
+		})
 
 	app.route('/login')
 		.get(function (req, res) {

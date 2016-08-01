@@ -34,10 +34,12 @@ html(lang='en')
                     ul.nav.navbar-nav
                         li(class=(title === 'Home' ? 'active' : ''))
                             a(href='/') Home
-                        li(class=(title === 'Add Post' ? 'active' : ''))
+                        li(class=(title === 'New Poll' ? 'active' : ''))
                             a(href='/newpoll') Create New Poll
-                        li(class=(title === 'Add Category' ? 'active' : ''))
+                        li(class=(title === 'My Polls' ? 'active' : ''))
                             a(href='/mypolls') MyPolls
+                        li(class=(title === 'Polls' ? 'active' : ''))
+                            a(href='/polls') Polls
                     ul.nav.navbar-inverse
                         if !display-name
                             a(href='/auth/github')
