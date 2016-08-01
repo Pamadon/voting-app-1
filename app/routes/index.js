@@ -36,7 +36,7 @@ module.exports = function (app, passport) {
 	app.route('/polls')
 		.get(function(req, res) {
 		    
-		    var polls = db;
+		    var polls = db.get('polls');
 		    
 		    console.log(polls);
 		    
