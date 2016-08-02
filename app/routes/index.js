@@ -5,6 +5,7 @@ var ClickHandler = require(path + '/app/controllers/clickHandler.server.js');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var db = mongoose.createConnection(process.env.MONGO_URI);
+var Poll = require(path + '/app/models/polls.js');
 
 module.exports = function (app, passport) {
 
@@ -35,10 +36,14 @@ module.exports = function (app, passport) {
 		
 	app.route('/polls')
 		.get(function(req, res) {
+		   
+		Poll.find(function (err, polls) {
+		if (err) return console.error(err);
+			console.log(polls);
+		}) 
 		    
-		    var polls = db.get('polls');
 		    
-		    console.log(polls);
+		    
 		    
 		    res.render(path + '/public/polls.jade');
 		})
