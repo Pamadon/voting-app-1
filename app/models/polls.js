@@ -1,12 +1,11 @@
 'use strict';
 
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
-var Poll = new mongoose.Schema({
-    title: { type: String, required: true },
+var pollSchema = new mongoose.Schema({
+    title: String,
     creator: String,
     choices: [String],
     votes: [Number]
 });
-module.exports = mongoose.model('Poll', Poll);
+mongoose.model('Poll', pollSchema);
